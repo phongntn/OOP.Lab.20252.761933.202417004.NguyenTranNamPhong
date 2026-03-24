@@ -27,7 +27,7 @@ public class CalcTwoNumbers {
         strSum += String.valueOf(num1 + num2);
         strDiff += String.valueOf(num1 - num2);
         strProduct += String.valueOf(num1 * num2);
-        strQuotient += String.valueOf(num1q / num2q);
+
 
         JOptionPane.showMessageDialog(null, strSum,
                 "Sum of two numbers",
@@ -38,9 +38,20 @@ public class CalcTwoNumbers {
         JOptionPane.showMessageDialog(null, strProduct,
                 "Product of two numbers",
                 JOptionPane.INFORMATION_MESSAGE);
-        JOptionPane.showMessageDialog(null, strQuotient,
-                "Quotient of two numbers",
-                JOptionPane.INFORMATION_MESSAGE);
+
+        if (num2q != 0) {
+            strQuotient += String.valueOf(num1q / num2q);
+            JOptionPane.showMessageDialog(null, strQuotient,
+                    "Quotient of two numbers",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        else {
+            JOptionPane.showMessageDialog(null,
+                    "No solution", "Quotient of two numbers",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
         System.exit(0);
     }
 }
