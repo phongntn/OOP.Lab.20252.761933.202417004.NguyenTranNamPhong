@@ -8,8 +8,8 @@ public class EquationSolving {
         equation = JOptionPane.showInputDialog(null,
                 "Pick a number from 1 to 3:" +
                         "\n 1. First-degree equation with one variable." +
-                        "\n 2. Second-degree equation with one variable." +
-                        "\n 3. Third-degree equation with one variable.",
+                        "\n 2. First-degree equation with two variable." +
+                        "\n 3. Second-degree equation with one variable.",
                 "Choose equation",
                 JOptionPane.INFORMATION_MESSAGE);
 
@@ -80,10 +80,14 @@ public class EquationSolving {
             double c = Double.parseDouble(JOptionPane.showInputDialog("Enter c:"));
             double d = Double.parseDouble(JOptionPane.showInputDialog("Enter d:"));
 
-            double delta = b*b - 4*a*c;
+            double delta = b*b - 4*a*(c-d);
 
             String result;
-            if (delta < 0) {
+
+            if (a == 0 && b == 0 &&  c != d) {
+                result = "No solution";
+            }
+            else if (delta < 0) {
                 result = "No solution";
             }
 
