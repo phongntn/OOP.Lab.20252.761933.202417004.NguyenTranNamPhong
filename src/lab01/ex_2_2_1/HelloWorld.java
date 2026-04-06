@@ -1,4 +1,4 @@
-package ex_2_2_1;
+package lab01.ex_2_2_1;
 
 public class HelloWorld {
 

@@ -1,4 +1,4 @@
-package ex_6_2;
+package lab01.ex_6_2;
 
 import java.util.Scanner;
 

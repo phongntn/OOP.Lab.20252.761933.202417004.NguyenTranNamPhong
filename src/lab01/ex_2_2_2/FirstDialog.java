@@ -1,4 +1,4 @@
-package ex_2_2_2;
+package lab01.ex_2_2_2;
 
 import javax.swing.*;
 

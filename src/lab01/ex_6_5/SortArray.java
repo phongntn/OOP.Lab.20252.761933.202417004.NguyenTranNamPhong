@@ -1,4 +1,4 @@
-package ex_6_5;
+package lab01.ex_6_5;
 
 import java.util.Arrays;
 import java.util.Scanner;
