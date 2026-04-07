@@ -23,6 +23,5 @@ public class Cart {
     }
 
     void removeDigitalVideoDisc(DigitalVideoDisc disc) {
-        if ()
     }
 }
