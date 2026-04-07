@@ -13,8 +13,15 @@ public class Aims {
                 "Science Fiction", "George Lucas", 87, 24.95f);
         anOrder.addDigitalVideoDisc(dvd2);
 
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
+                "Animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
+
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Godfather");
+
+        anOrder.removeDigitalVideoDisc(dvd1);
+        anOrder.removeDigitalVideoDisc(dvd4);
+
 
         System.out.println("Total Cost is: " + anOrder.totalCost());
 

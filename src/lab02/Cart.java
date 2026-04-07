@@ -1,5 +1,7 @@
 package lab02;
 
+import java.util.Arrays;
+
 public class Cart {
     int qtyOrdered;
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -11,7 +13,7 @@ public class Cart {
         }
         itemsOrdered[qtyOrdered] = disc;
         qtyOrdered++;
-        System.out.println("The disc has been added.");
+        System.out.println("A disc has been added.");
     }
 
     float totalCost() {
@@ -23,5 +25,29 @@ public class Cart {
     }
 
     void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+        int index = -1;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i] == disc) {
+                index = i;
+            }
+        }
+        if (index == -1) {
+            System.out.println("Disc not found.");
+            return;
+        }
+        DigitalVideoDisc[] tmp = new DigitalVideoDisc[qtyOrdered - 1];
+        System.arraycopy(itemsOrdered, 0, tmp, 0, index);
+        System.arraycopy(itemsOrdered, index + 1, tmp, index, qtyOrdered - index - 1);
+        qtyOrdered--;
+        System.arraycopy(tmp, 0, itemsOrdered, 0, qtyOrdered);
+        System.out.println("Disc has been removed.");
+    }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "qtyOrdered=" + qtyOrdered +
+                ", itemsOrdered=" + Arrays.toString(itemsOrdered) +
+                '}';
     }
 }
