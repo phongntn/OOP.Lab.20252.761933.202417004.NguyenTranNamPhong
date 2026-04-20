@@ -1,0 +1,16 @@
+Question:
+What happens if users choose "Cancel"?
+Answer:
+In the code logic, if option equals to YES_OPTION, the program will display "Yes", and any other options including CANCEL_OPTION will result in "No".
+
+Question:
+How to customize the options to users, e.g. only two options: "Yes" and "No", OR "I do" and "I don't"?
+Answer:
+Here we can use the showOptionDialog() method instead of showConfirmDialog().
+- For "Yes" and "No" only case, use JOptionPane.YES_NO_OPTION as the optionType parameter.
+- For custom options "I do" and "I don't", we can pass an array of String like this:
+String[] options = {"I do", "I don't"};
+
+        int option = JOptionPane.showOptionDialog(null,
+                "Do you want to change to the first class ticket?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
