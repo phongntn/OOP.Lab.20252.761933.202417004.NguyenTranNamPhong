@@ -48,6 +48,7 @@ public class DigitalVideoDisc {
         return nbDigitalVideoDiscs;
     }
 
+
     public String getTitle() {
         return title;
     }
@@ -87,6 +88,7 @@ public class DigitalVideoDisc {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
 
     @Override
     public String toString() {
