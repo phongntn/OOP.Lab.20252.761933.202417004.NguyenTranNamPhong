@@ -11,9 +11,9 @@ public class GarbageCreator {
 
         startTime = System.currentTimeMillis();
 
-        String outputString = "";
+        StringBuilder outputStringBuilder = new StringBuilder();
         for (byte b : inputBytes) {
-            outputString += (char) b;
+            outputStringBuilder.append((char) b);
         }
 
         endTime = System.currentTimeMillis();
