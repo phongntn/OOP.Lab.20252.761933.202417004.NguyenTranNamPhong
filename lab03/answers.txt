@@ -1,0 +1,14 @@
+Question:
+Is JAVA a Pass by Value or a Pass by Reference programming language?
+Answer:
+JAVA is Pass by Value.
+    - For primitive types, the actual value is copied.
+    - For objects, the reference value (address) is copied.
+Which means:
+    - You can modify the object’s internal state inside a method.
+    - But you cannot change the original reference (cannot swap objects).
+For example in the TestPassingParameter.java class:
+    - swap(jungleDVD, cinderellaDVD) do not swap because:
+        + o1 and o2 are just copies of references.
+        + Reassigning them does not affect the original variables.
+    - But dvd.setTitle(title) works because you are modifying the object, not the reference
