@@ -1,10 +1,14 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 import java.util.Arrays;
 
 public class Cart {
     int qtyOrdered;
     public static final int MAX_NUMBERS_ORDERED = 20;
     private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-    void addDigitalVideoDisc(DigitalVideoDisc disc) {
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered >= MAX_NUMBERS_ORDERED) {
             System.out.println("The cart is almost full.");
             return;
@@ -14,8 +18,8 @@ public class Cart {
         System.out.println("A disc has been added.");
     }
 
-//    void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-//        for (DigitalVideoDisc disc : dvdList) {
+//    void addDigitalVideoDisc(hust.soict.dsai.aims.disc.DigitalVideoDisc[] dvdList) {
+//        for (hust.soict.dsai.aims.disc.DigitalVideoDisc disc : dvdList) {
 //            addDigitalVideoDisc(disc);
 //        }
 //    }
@@ -31,7 +35,7 @@ public class Cart {
         addDigitalVideoDisc(dvd2);
     }
 
-    float totalCost() {
+    public float totalCost() {
         float res = 0;
         for (int i = 0; i < qtyOrdered; i++) {
             res += itemsOrdered[i].getCost();
@@ -39,7 +43,7 @@ public class Cart {
         return res;
     }
 
-    void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+    public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         int index = -1;
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemsOrdered[i] == disc) {
@@ -105,7 +109,7 @@ public class Cart {
 
     @Override
     public String toString() {
-        return "Cart{" +
+        return "hust.soict.dsai.aims.cart.Cart{" +
                 "qtyOrdered=" + qtyOrdered +
                 ", itemsOrdered=" + Arrays.toString(itemsOrdered) +
                 '}';
