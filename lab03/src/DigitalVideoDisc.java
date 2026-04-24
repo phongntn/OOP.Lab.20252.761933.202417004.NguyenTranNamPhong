@@ -89,6 +89,9 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
+    public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title);
+    }
 
     @Override
     public String toString() {
