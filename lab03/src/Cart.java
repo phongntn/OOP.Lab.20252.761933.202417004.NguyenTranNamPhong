@@ -14,6 +14,23 @@ public class Cart {
         System.out.println("A disc has been added.");
     }
 
+//    void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+//        for (DigitalVideoDisc disc : dvdList) {
+//            addDigitalVideoDisc(disc);
+//        }
+//    }
+
+    void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            addDigitalVideoDisc(disc);
+        }
+    }
+
+    void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        addDigitalVideoDisc(dvd1);
+        addDigitalVideoDisc(dvd2);
+    }
+
     float totalCost() {
         float res = 0;
         for (int i = 0; i < qtyOrdered; i++) {
