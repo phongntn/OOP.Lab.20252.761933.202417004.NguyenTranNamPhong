@@ -41,7 +41,40 @@ public class Cart {
         System.out.println("Disc has been removed.");
     }
 
-    public void printCart() {
+    public void searchById(int id) {
+        boolean found = false;
+
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getId() == id) {
+                System.out.println("Search result:");
+                System.out.println(itemsOrdered[i]);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No DVD found with ID: " + id);
+        }
+    }
+
+    public void searchByTitle(String title) {
+        boolean found = false;
+
+        System.out.println("Search result:");
+
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].isMatch(title)) {
+                System.out.println(itemsOrdered[i]);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No DVD found with title: " + title);
+        }
+    }
+
+    public void print() {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");
 
