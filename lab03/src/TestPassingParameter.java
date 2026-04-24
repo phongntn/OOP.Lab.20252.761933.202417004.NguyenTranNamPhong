@@ -5,11 +5,7 @@ public class TestPassingParameter {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
         DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
-        DigitalVideoDisc[] pair = {jungleDVD, cinderellaDVD};
-        swap(pair);
-
-        jungleDVD = pair[0];
-        cinderellaDVD = pair[1];
+        swap(jungleDVD, cinderellaDVD);
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
         System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
 
@@ -17,10 +13,10 @@ public class TestPassingParameter {
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
     }
 
-    public static void swap(DigitalVideoDisc[] arr) {
-        DigitalVideoDisc tmp = arr[0];
-        arr[0] = arr[1];
-        arr[1] = tmp;
+    public static void swap(Object o1, Object o2) {
+        Object tmp = o1;
+        o1 = o2;
+        o2 = tmp;
     }
 
     public static void changeTitle(DigitalVideoDisc dvd, String title) {
